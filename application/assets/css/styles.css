@@ -1,0 +1,11 @@
+.white-color{
+    color: #fff;
+}
+.sticky-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid lightgray;
+    z-index: 99;
+}
