@@ -42,4 +42,6 @@
     </form>
     </div>
   </section>
- <?php $this->load->view('templates/footer');?>        
+<div class="home-login">
+    <?php $this->load->view('templates/footer');?>
+</div>     

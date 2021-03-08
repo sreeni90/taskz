@@ -7,12 +7,14 @@ if (!defined('BASEPATH'))
 class Auth_model extends CI_Model {
 
     // variables 
-    private $_userID;
     private $_userName;
-    private $_name;
     private $_password;
     
-    // login and to verify the plain password just for this task which is not recommended we can use encrypt library functions
+     /** 
+     * login and to verify the plain password just for this task which is not 
+     * recommended we can use encrypt library functions
+     */
+     
     function login() {
         $this->db->select('id as user_id, user_name, name, password');
         $this->db->from('users');

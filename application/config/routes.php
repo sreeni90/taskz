@@ -54,3 +54,9 @@ $route['tasks'] = 'Tasks/index';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+# for tasks
+$route['tasks'] = "tasks/index";
+$route['tasks/all'] = "tasks/all";
+$route['tasks/add']['post'] = "tasks/taskCreate";
+$route['task/update/(:any)'] = "tasks/update/$1";

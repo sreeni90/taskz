@@ -1,11 +1,26 @@
-.white-color{
-    color: #fff;
-}
-.sticky-footer{
+.home-login .sticky-footer{
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
     border-top: 1px solid lightgray;
     z-index: 99;
+}
+
+.sticky-footer{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid lightgray;
+    z-index: 99;
+}
+.status-text {
+    font-size: 0.6rem;
+}
+
+.footer-bg{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.help-block.with-errors {
+    color: red;
 }

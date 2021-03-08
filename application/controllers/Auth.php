@@ -12,12 +12,18 @@ class Auth extends CI_Controller {
     }
     
     // login view
-    public function index() {        
-        $data = array();
-        $data['description'] = 'Login for Tasks';
-        $data['keywords'] = 'login,tasks';
-        $data['title'] = "Login - Tasks";     
-        $this->load->view('auth/login', $data);
+    public function index() { 
+        if (isset($this->session->userdata('ci_seesion_key')['is_loggedin']) && $this->session->userdata('ci_seesion_key')['is_loggedin']) {
+            redirect('tasks/index');       
+        }
+        else {
+            $data = array();
+            $data['description'] = 'Login for Tasks';
+            $data['keywords'] = 'login,tasks';
+            $data['title'] = "Login - Tasks";     
+            $this->load->view('auth/login', $data);
+        }
+        
     }
     
 
@@ -57,19 +63,7 @@ class Auth extends CI_Controller {
             }
         }
     }
-    // tasks
-    public function tasks() {  
-        if ($this->session->userdata('ci_seesion_key')['is_loggedin'] == FALSE) {
-            redirect('auth/index');
-        } else {     
-            $data = array();
-            $data['description'] = 'Tasks Management';
-            $data['keywords'] = 'tasks';
-            $data['title'] = "Tasks Management - Taskz";
-            $data['breadcrumbs'] = array('Profile' => '#');
-            $this->load->view('tasks/index', $data);
-        }
-    }
+
     //logout 
     public function logout() {
         $this->session->unset_userdata('ci_seesion_key');
