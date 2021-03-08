@@ -34,3 +34,18 @@ localhost:8001  ## the url should be updated on the config.php base_url
 $config['base_url'] = 'http://localhost:8001/';
 
 The above change is required for some ajax requests 
+
+**************
+Access the application
+**************
+
+Now we can access the app from http://localhost:8001/
+
+Demo Credentials: (Assuming database is already imported and available)
+
+username: sreeni
+password: admin 
+
+After login it will redirect to the tasks. 
+
+http://localhost:8001/tasks/
